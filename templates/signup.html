@@ -1,0 +1,163 @@
+<html>
+  <head>
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link href="{% static 'signup.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">MYKE</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#signup">SignUp</a></li>
+        <li><a href="signin">SignIn</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="{% static 'img/mountain2.png' %}" id="mountain_behind"/>
+      <img src="{%static 'img/starsafar.png' %}" id="moon" class="shiningstar" />
+      <h2 id="text">Trade NFTs</h2>
+      <a href="#signup" id="btn">Explore</a>
+    </section>
+    <div class="sec" id="sec">
+      <h2>Project launching soon</h2>
+      <p>
+        Join our growing community, we're proud to announce our brand new
+        digital asset, "Floating ethereum".<br />
+        Built on Ethereum blockchain in regards to ethereums merge up, SignUp with us to be whitelisted.<br />
+      </p>
+      <br />
+      <p>
+        Unique characters developed by Michael, an aesthetic piece of art.<br />
+        Our discord to be announced soon, stay tuned!!
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountain_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountain_front = document.getElementById("mountain_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+
+    {% for message in messages%}
+    <!--=FOR EVERY MESSAGE IN OUT ERROR MESSAGES IN VIEWS, EFFECT SHOULD BE TAKEN IN THIS FORM==-->
+    <div
+      class="alert alert-{{message.tags}} alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Message:</strong> {{ message }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+
+    <div class="signlog">
+      <h2 id="signup">SignUp</h2>
+      <p>
+        Already have an account?
+        <a href="signin">Login</a>
+      </p>
+    </div>
+
+    <form class="form" action="/signup" method="POST">
+      {% csrf_token %}
+      <div class="inputbox">
+        <label for="">Username</label>
+        <input
+          class="in"
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Create a Username"
+          required
+        />
+        <br />
+
+        <label for="">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Enter Your First Name (only letters and numbers)"
+          required
+        />
+        <br />
+
+        <label for="">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Enter Your Last Name (only letters and numbers)"
+          required
+        />
+        <br />
+
+        <label for="">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email Address (only letters and numbers)"
+          required
+        />
+        <br />
+
+        <label for="">Password</label>
+        <input
+          type="password"
+          id="pass1"
+          name="pass1"
+          placeholder="Create a Password (only letters and numbers)"
+          required
+        />
+        <br />
+
+        <label for="">Confirm your Password</label>
+        <input
+          type="password"
+          id="pass2"
+          name="pass2"
+          placeholder="Confirm Your Password (only letters and numbers)"
+          required
+        />
+        <br />
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          Terms of service &#169
+      </div>
+    </div>
+  </body>
+</html>

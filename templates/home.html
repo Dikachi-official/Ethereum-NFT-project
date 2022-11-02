@@ -1,0 +1,141 @@
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="dsecription" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'home.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <!--========FOR THE POP UP MESSAGE, SAYING "ACCOUNT SUCCESSFULLY CREATED"=========-->
+    {% for message in messages %}
+    <div
+      class="alert alert-{{message.tags}} alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Message:</strong> {{ message }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    <!--====AFTER POP UP MESSAGE=====-->
+
+    {% if user.is_authenticated %}
+    <!--if user is logged in display these words below, and for more info the jinja tags holding variables where prev assigned in views.py-->
+    <h3>Hello {{fname}}</h3>
+    <h3>You are successfully logged in</h3>
+    <h3>myke.NFT</h3>
+    <button type="submit"><a href="signup">SignOut</a></button>
+
+    {% else %}
+    <button type="submit"><a href="/signup">SignUp</a></button>
+    <button type="submit"><a href="/signin">SignIn</a></button>
+
+    {% endif %}
+
+
+    <body>
+    <header class="header" id="header">
+        <nav class="nav container">   
+            <!---Toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-5-line"></i>
+            </div>
+        </nav>
+    </header>    
+    <main class="main">
+        <section class="home">
+            <div class="home__shape-small"></div>
+            <div class="home__shape-big-1"></div>
+            <div class="home__shaoe-big-2"></div>
+            <img src="images/bnb.png" class="home__shape-bg">
+
+
+            <div class="home__container container">
+                <div class="home__info">
+                    <h1 class="home___title">
+                        <span>Experience</span>
+                    </h1>
+                    <p class="home__description">
+                        Top NFT In This Space<br>     
+                    </p>
+                    <a href="#" class="home__button">COMING SOON</a>
+                </div>
+
+                <div class="home__group">
+                    <div class="home__images">
+                        <div class="home__img-eth">
+                            <img src="{% static 'img/eth2.png' %}" alt="home image">
+                        </div>
+                        <div class="home__img-orbe">
+                            <img src="{% static 'img/holder.png' %}" alt="home image">
+                    </div>
+
+                    <div class="home__data">
+                        <div>
+                            <h2 class="home__data-number">24k</h2>
+                            <span class="home__data-subtitle">ArtWork</span>
+                        </div>
+                        <div>
+                            <h2 class="home__data-number">13k</h2>
+                            <span class="home__data-subtitle">Auction</span>
+                        </div>
+                        <div>
+                            <h2 class="home__data-number">7k</h2>
+                            <span class="home__data-subtitle">Artist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__footer">
+                    <div>
+                        <span class="home__footer-title">Starting price</span>
+                        <h3 class="home__footer-number">2.00 ETH</h3>
+                        <span class="home__footer-subtitle">$3000.56</span>
+                    </div>
+
+                    <div>
+                        <span class="home__footer-title">Launching</span>
+                        <div class="home__footer-time">
+                            <div class="home__footer-counter">
+                                <h3 class="home__footer-number">06</h3>
+                                <span class="home__footer-subtitle">hours</span>
+                            </div>
+
+                            <div class="home__footer-counter">
+                                <h3 class="home__footer-number">37</h3>
+                                <span class="home__footer-subtitle">minutes</span>
+                            </div>
+
+                            <div class="home__footer-counter">
+                                <h3 class="home__footer-number">60</h3>
+                                <span class="home__footer-subtitle">seconds</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--===============SCROLL REVEALER=================-->
+    <script src="scrollreveal.min.js"></script>
+
+    <!--===============MAIN JS=================-->
+    <script src="main.js"></script>
+  </body>
+</html>
