@@ -23,6 +23,8 @@ Full Django NFT site
 </ul>
 <h2>Creator</h2>
 <p><i class="ri-account-circle-fill"></i>Dikachi-official</p>
+<h2>About</h2>
+<li>Added Cors Headers to include Cart features</li>
 <h2>Contributing</h2>
 <li>Contributions, and feature requests are welcomed</li>
 <h2 align="center">Show your support</h2>
