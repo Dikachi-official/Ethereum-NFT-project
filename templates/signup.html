@@ -14,51 +14,31 @@
     <header>
       <a href="#" class="logo">MYKE</a>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <!--<li><a href="#" class="active">Home</a></li>-->
         <li><a href="#signup">SignUp</a></li>
         <li><a href="signin">SignIn</a></li>
       </ul>
     </header>
-    <section>
-      <img src="{% static 'img/mountain2.png' %}" id="mountain_behind"/>
-      <img src="{%static 'img/starsafar.png' %}" id="moon" class="shiningstar" />
-      <h2 id="text">Trade NFTs</h2>
-      <a href="#signup" id="btn">Explore</a>
-    </section>
-    <div class="sec" id="sec">
-      <h2>Project launching soon</h2>
-      <p>
-        Join our growing community, we're proud to announce our brand new
-        digital asset, "Floating ethereum".<br />
-        Built on Ethereum blockchain in regards to ethereums merge up, SignUp with us to be whitelisted.<br />
-      </p>
-      <br />
-      <p>
-        Unique characters developed by Michael, an aesthetic piece of art.<br />
-        Our discord to be announced soon, stay tuned!!
-      </p>
-    </div>
-    <script>
-      let stars = document.getElementById("stars");
-      let moon = document.getElementById("moon");
-      let mountain_behind = document.getElementById("mountains_behind");
-      let text = document.getElementById("text");
-      let btn = document.getElementById("btn");
-      let mountain_front = document.getElementById("mountain_front");
-      let header = document.querySelector("header");
-
-      window.addEventListener("scroll", function () {
-        let value = window.scrollY;
-        stars.style.left = value * 0.25 + "px";
-        moon.style.top = value * 1.05 + "px";
-        mountains_behind.style.top = value * 0.5 + "px";
-        mountains_front.style.top = value * 0 + "px";
-        text.style.marginRight = value * 4 + "px";
-        text.style.marginTop = value * 1.5 + "px";
-        btn.style.marginTop = value * 1.5 + "px";
-        header.style.top = value * 0.5 + "px";
-      });
-    </script>
+    <div class="main-container">
+      <!--<img src="{% static 'img/mountain2.png' %}" id="mountain_behind"/>-->
+      <a class="expoe" href="#signup" id="btn"><p class="btn" id="connectWallet" >Connect MetaMask</p></a>
+    </div>  
+    
+      <div class="sec" id="sec">
+        <h2>Monks of Ethereum</h2>
+        <p>
+          Join our growing community, we're proud to announce our brand new
+          digital asset, "Monks of ethereum".<br />
+          Built on Ethereum blockchain, SignUp with us to be whitelisted.<br />
+        </p>
+        <br />
+        <p>
+          Unique characters developed by Myke, Don't miss out on our new NFT Collection<br />
+          Our discord to be announced soon, stay tuned!!
+        </p>
+      </div>
+      
+    
 
     {% for message in messages%}
     <!--=FOR EVERY MESSAGE IN OUT ERROR MESSAGES IN VIEWS, EFFECT SHOULD BE TAKEN IN THIS FORM==-->
@@ -77,7 +57,6 @@
       </button>
     </div>
     {% endfor %}
-
     <div class="signlog">
       <h2 id="signup">SignUp</h2>
       <p>
@@ -85,79 +64,1086 @@
         <a href="signin">Login</a>
       </p>
     </div>
-
     <form class="form" action="/signup" method="POST">
+      
       {% csrf_token %}
-      <div class="inputbox">
+      <div class="inputbox" id="register">
+        
         <label for="">Username</label>
         <input
-          class="in"
           type="text"
           id="username"
           name="username"
-          placeholder="Create a Username"
+          placeholder="  Create a Username"
           required
         />
         <br />
 
         <label for="">First Name</label>
+        <br/>
         <input
           type="text"
           id="fname"
           name="fname"
-          placeholder="Enter Your First Name (only letters and numbers)"
+          placeholder="  Enter Your First Name"
           required
         />
-        <br />
-
+        <br/>
         <label for="">Last Name</label>
+        <br/>
         <input
           type="text"
           id="lname"
           name="lname"
-          placeholder="Enter Your Last Name (only letters and numbers)"
+          placeholder=" Enter Your Last Name"
           required
         />
         <br />
 
         <label for="">Email Address</label>
+        <br/>
         <input
           type="email"
           id="email"
           name="email"
-          placeholder="Enter Your Email Address (only letters and numbers)"
+          placeholder="  Enter Your Email Address"
           required
         />
         <br />
 
         <label for="">Password</label>
+        <br/>
         <input
           type="password"
           id="pass1"
           name="pass1"
-          placeholder="Create a Password (only letters and numbers)"
+          placeholder="  Create a Password"
           required
         />
         <br />
 
-        <label for="">Confirm your Password</label>
+        <label for="">Confirm Password</label>
+        <br/>
         <input
           type="password"
           id="pass2"
           name="pass2"
-          placeholder="Confirm Your Password (only letters and numbers)"
+          placeholder="  Confirm Your Password"
           required
         />
         <br />
       </div>
 
-      <button type="submit">Sign Up</button>
+      <button class="btn200"type="submit">Sign Up</button>
     </form>
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          Terms of service &#169
-      </div>
+    <img class="monkman" src="{% static 'img/monkcharacter1.png' %}">
+
+    <hr/>
+    <br/>
+    
+
+    <!--=== CARD PLACEMENT ===-->
+    
+
+
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-img">
+                <div class="card-img__overlay">
+                    <img src="">
+                </div>
+                <img class="card-img__img" src="{% static 'img/backmonk3.jpg' %}">
+            </div>
+            <div class="card-content">
+                <h3 class="card-content__title">Monks Of Ethereum</h3>
+                <p class="card-content__text">Launch date to be announced 2023 Q2</p>
+            </div>
+            <div class="card-info">
+                <div class="card-info__price">
+                    <img src="{% static 'img/eth0.png' %}">
+                    0.21 ETH
+                </div>
+                <div class="card-info__time">
+                    <img src="{% static 'img/clock1.png' %}">
+                    Anticipate
+                </div>
+            </div>
+            <div class="card-author">
+                <div class="card-author-img">
+                    <img src="{% static 'img/myke.jpg' %}" class="card-author-img__img"/>
+                </div>
+                <h5class="card-author-text">Creation of <span class="highlight">MYKE</span></h5>
+            </div>
+            <div class="line"></div>
+        </div>  
     </div>
+    <br/> 
+    <hr/>
+
+
+
+
+
+    <!--=== END OF CARD PLACEMENT ===-->
+
+
+    <div class="starting-point">
+      <h2> WHERE TO START ?</h2>
+      <h3> STEP I</h3>
+      <li> Register with Us</li>
+      <li> Login to get whitelisted with early bird privileges </li>
+      <br/>
+      <h3> STEP II</h3>
+      <p>Anticipate the announcement of our Discord and Twitter information</p>
+      <div class="line"></div>
+      <br/>
+    </div>
+    <hr/>
+    <br/>
+
+
+    <br/>  
+    <div class="audition">
+      <h2> Fully audited and verified</h2>
+      <p>Once contract code is established, It'll be made known to all
+        and will be guaranteed and completely safe.
+        For project, security project and team KYC verification to be announced in due course
+      </p>
+    </div>  
+    <div class="our-team">
+      <h2>OUR TEAM</h2>
+      <img src="{% static 'img/bitmoji1.jpg' %}">
+      <p>
+        Dikachi_official<br/>
+        <b>CEO & FOUNDER</b>
+        <a class="mytwitter" href="https://twitter.com/Deeka_official1?t=nsrdVi_QyyFxF8GUXUAILA&s=09" target="_blank" >Dikachi_official | Twitter</a>
+      </p>
+      <div class="line"></div>
+      <br/>
+    </div>
+
+    <div class="main-footer">
+      <hr/>
+      <div class="branding">
+        <img src="{% static 'img/myke.jpg'%}">
+        <p>Exclusive NFT Collection coming soon</p>
+      </div>  
+      <div class="contaner">
+        <h3>MONKS OF  <img src="{% static 'img/eth2.png' %}"></h3>
+        <h3>M.O.E</h3>
+        Terms of service &#169
+      </div>
+      <div class="section">
+        <p> ABOUT M.O.E</p>
+        <ul>
+          <br/>
+          <li><a href="#sec">About</a></li>
+          <li><a href="{% url 'signin' %}#roadmap">Roadmap</a></li>
+        </ul>  
+      </div>  
+    </div>
+
+    <style>
+      body{
+        background: url("/static/img/thundermedium.jpg")
+      }
+
+
+      /*=== SCREEN BELOW 320px ===*/
+      @media only screen and (max-width: 320px) {
+        .main-container{
+          width:100%;
+          height:480px;
+          background-image:url({% static 'img/mountain2.png' %});
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+        body{
+          width:100%;
+          
+      }
+      } 
+
+      /*===Screen below 380px ===*/
+      @media only screen and (max-width: 380px) {
+        body{
+            width:100%;
+            
+        }
+        header{
+          width:95%;
+          padding:10px;
+          padding-right:15px;
+          right:10px;
+  
+        }
+        header .logo{
+            margin-left:1px;
+            width:15px;
+            font-size:13px;
+        }
+        header ul{
+            width:30%;
+            margin-right:20px;
+            display:inline-flex;
+        }
+        header li{
+          width:45px;
+          padding-right:20px;
+          font:12px;
+          margin-left:15px;
+          gap:5px;
+        }
+        .main-container{
+          width:100%;
+          height:440px;
+          background-image:url({% static 'img/mountain2.png' %});
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+          
+        }
+        .main-container h2{
+          text-align:center;
+          align-items:center;
+          justify-content:center;
+        }
+        .sec{
+          width:90%;
+          margin-top:0px;
+        }
+        .sec h2{
+          margin-top:0px;
+          padding-left:2%;
+          font-size:45px;
+          padding-right:20%;
+          text-align:center;
+          align-items:center;
+        }
+
+        .main-container .explore{
+          font-size:14px;
+          margin-left:35%;
+          margin-top:40%;
+          text-align:center;
+          align-items:center;
+        }
+
+      }
+
+
+      /*=== SCREEN BELOW 420px ===*/
+      @media only screen and (max-width: 420px) {
+        .main-container{
+          width:100%;
+          height:480px;
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+      } 
+
+
+      /*=== Screen below 440px ===*/
+      @media only screen and (max-width: 440px) {
+        body{
+            width:100%;
+        }
+        header{
+            width:100%;
+    
+        }
+        header .logo{
+            margin-left:1px;
+            width:20px;
+            font-size:14px;
+            left:1px;
+        }
+
+        header ul{
+          width:30%;
+          margin-right:20px;
+          display:inline-flex;
+        }
+        header li{
+          width:28px;
+          justify-content:space-between;
+          padding-right:15px;
+          font:12px;
+        }
+        .main-container{
+          width:100%;
+          height:500px;
+          background-image:url({% static 'img/mountain2.png' %});
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+
+        
+        .main-container h2{
+          text-align:center;
+          align-items:center;
+          justify-content:center;
+        }
+        .sec{
+          width:100%;
+          margin-top:0px;
+        }
+        .sec h2{
+          margin-top:0px;
+          width:90%;
+        }
+
+
+        .form{
+          background-color:d7bfdc;
+          border-style:none;
+          width:65%;
+          margin-left:2%;
+          padding-right:20px;
+          margin-bottom:35px;
+          
+        }
+        .inputbox label{
+          width:10%;
+        }
+        .inputbox input{
+          border-radius:20px;
+          margin-right:30px;
+          width:30%;
+          height:30px;
+          font-size:14px;
+        }
+
+        /*=== FOOTER ===*/
+        .main-footer{
+          width:100%;
+          padding:30px;
+          background-color:#292929;
+          height:auto;
+          margin-bottom:0px;
+        } 
+      }
+
+
+      /*=== SCREEN BELOW 600px ===*/
+      @media only screen and (max-width: 600px) {
+        .main-container{
+          width:100%;
+          height:500px;
+          background-repeat: no-repeat;
+          background-position:center;
+
+          background-size: cover;
+          background-attachment: fixed;
+        }   
+        /*=== FOOTER ===*/
+        .main-footer{
+          width:100%;
+          padding:30px;
+          background-color:#292929;
+          height:250px;
+          margin-top:20px;
+        } 
+      } 
+
+
+      /*=== SCREEN BELOW 800px ===*/
+      @media only screen and (max-width: 800px) {
+        .main-container{
+          width:100%;
+          height:500px;
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+      }  
+
+      /*=== SCREEN BELOW 800px ===*/
+      @media only screen and (max-width: 800px) {
+        .main-container{
+          width:100%;
+          height:500px;
+          background-image:url({% static 'img/mountain2.png' %});
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+
+        .main-container .expoe{
+          font-size:14px;
+          width:130px;
+          height:55px;
+          margin-left:35%;
+          margin-top:65%;
+          text-align:center;
+          align-items:center;
+          justify-content:center;
+        }
+        .main-container .expoe .btn{
+          font-size:14px;
+
+        }
+       
+
+
+        header .logo{
+          margin-left:2px;
+          width:3%;
+          font-size:15px;
+        }
+
+        header ul{
+          width:25%;
+          margin-right:10px;
+          padding-right:10px;
+        }
+        header li{
+          margin-right:8px;
+        }
+
+        .form{
+          background-color:d7bfdc;
+          border-style:none;
+          width:65%;
+          margin-left:2%;
+          padding-right:10px;
+          padding-top:10px;
+          margin-bottom:35px;
+          
+        }
+        .inputbox{
+          width:100%;
+        }
+        .inputbox label{
+          width:50px;
+        }
+        .inputbox input{
+          border-radius:20px;
+          margin-right:10px;
+          width:100%;
+          height:30px;
+          font-size:14px;
+        }
+
+          /*=== FOOTER ===*/
+        .main-footer{
+          width:100%;
+          padding:30px;
+          background-color:#292929;
+          height:200px;
+          margin-top:20px;
+        }
+        
+      } 
+      
+      
+
+
+
+
+      /*=== NORMAL SCREEN ===*/
+
+      /*=== top section ===*/
+      header{
+        width:100%;
+        padding-left:15px;
+        padding-right:10px;
+      }
+      header ul{
+        width:30%;
+        margin-right:35px;
+      }
+
+  
+
+      .main-container{
+        width:100%;
+        height:600px;
+        background-image:url({% static 'img/mountain2.png' %});
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .main-container a{
+        font-size:14px;
+        width:160px;
+        margin-left:45%;
+        margin-top:20%;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .main-container a .btn{
+        font-size:15px;
+        font-weight:bold;
+      }
+
+
+
+      /*=== SIGN UP TEXT ===*/
+      .signlog{
+        margin-left:20px;
+        margin-top:30px;
+        width:70%;
+        color:#fff;
+        margin-bottom:10px;
+      }
+      .signlog p a{
+        color:purple;
+        text-decoration:none;
+      }
+      /*=== END OF SIGN UP TEXT ===*/
+
+
+
+
+
+
+      /*===  FORM, MONKMAN, AND INPUT===*/
+
+      .form{
+        padding-top:0;
+        background-color:d7bfdc;
+        border-style:none;
+        width:60%;
+        margin-left:5%;
+        padding-right:10px;
+        margin-bottom:35px;
+      }
+      .inputbox{
+        width:80%;
+        margin-left:10%;
+        margin-right:10%;
+      }
+      .inputbox label{
+        width:10%;
+      }
+      .inputbox input{
+        border-radius:20px;
+        margin-left:10%;
+        margin-right:10%;
+        padding-right:10px;
+        width:80%;
+        height:30px;
+      }
+
+
+      .btn200{
+        width:80px;
+        height:35px;
+        padding:5px;
+        margin-top:20px;
+        color:#fff;
+        border-radius:20px;
+        background-color:#3b5fcb;
+        align-items:center;
+        text-align:center;
+        justify-content:center;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+
+      }
+      .btn200:hover{
+        background-color:#795695;
+      }
+
+      .monkman{
+        width:30%;
+        margin-right:3%;
+      }
+      /*=== END OF FORM, MONKMAN AND INPUT ===*/
+
+
+
+
+      /*=== BEGINNING OF STARTING POINTS ===*/
+      .starting-point{
+        background-color:#1c0522;
+        margin-bottom:30px;
+      }
+      
+      .starting-point h2{
+        color:white;
+        font-weight:200px;
+        font-size:30px;
+        line-spacing:1px;
+        margin-top:30px;
+        padding-top:20px;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:10px;
+      }
+
+      .starting-point h3{
+        color:white;
+        margin-left:10px;
+      }
+
+      .starting-point li{
+        list-style-type:none;
+        color:white;
+        margin-left:20px;
+      }
+
+      .starting-point p{
+        color:white;
+        margin-left:20px;
+        padding-right:20px;
+
+      }
+
+      /*== END OF STARTING POINT ==*/
+      
+
+
+    
+    
+
+
+      /*=== CARD PLACEMENT ===*/
+
+
+
+
+      .card-container{
+        height:400px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        /*==background-color:hsl(217,54%,11%);==*/
+        background-image:url({% static 'img/cloud-main.png' %});
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    
+      .card{
+          width:300px;
+          /*--==background-color:hsl(216, 50%, 16%);==--*/
+          background-color:#152238;
+          border-radius:15px;
+          padding: 20px 30px;
+          box-shadow: 1px 4px 5px 14px rgba(0,0,0,0.068);
+      }
+      
+      .card-img{
+          cursor:pointer;
+          margin-bottom:20px;
+          position:relative;
+          overflow:hidden;
+          display:flex;
+          border-radius:10px;
+      }
+      
+      .card-img:hover .card-img__overlay{
+          display: flex;
+      }
+      
+      .card-img:hover ~ .card-content .card-content__title,
+      .card-img:hover ~ .card-author .highlight{
+          color:hsl(178, 100%, 50%);
+      }
+      
+      .card-img__overlay{
+          display:none;
+          position:absolute;
+          width:100%;
+          height:100%;
+          align-items:center;
+          justify-content:center;
+          background-color: hsla(178, 100%, 50%, 0.45);
+      }
+      
+      .card-img__img{
+          width:100%;
+      }
+      
+      .card-content{
+          margin-bottom:25px;
+      }
+      
+      .card-content__title{
+          color:#fff;
+          font-family:"Outfit", sans-serif;
+          font-weight:400;
+          font-size:20px;
+          margin:0 0 15px 0;
+          cursor:pointer;
+      }
+      
+      .card-content__text{
+          color:hsl(215,51%, 70%);
+          margin:0;
+          font-size:18px;
+          font-family:"Outfit", sans-serif;
+          font-weight:300;
+      }
+      
+      .card-info{
+          display:flex;
+          justify-content:space-between;
+          font-size:18px;
+          font-family: "Outfit", sans-serif;
+          margin-bottom:20px;
+      }
+      
+      .card-info > div {
+          display:flex;
+          align-items:center;
+          gap:8px;
+          font-size:16px;
+      }
+      
+      .card-info__price{
+          color:hsl(178,100%,50%);
+          font-weight:500;
+      }
+      .card-info__time{
+          color:hsl(215, 51%, 70%);
+      }
+      
+      .card-author{
+          padding-top:15px;
+          display:flex;
+          align-items:center;
+          border-top:1px solid hsla(215, 52%, 70%, 0.267);
+      }
+      
+      .card-author-img{
+          width:12%;
+          display:flex;
+          margin-right:20px;
+      }
+      
+      .card-author-img__img{
+          width:100%;
+          border:1px solid #fff;
+          border-radius:50%;
+      }
+      
+      .card-author-text{
+          color:hsl(215, 51%, 70%);
+          font-size:16px;
+          font-family:"Outfit", sans-serif;
+          font-weight:500;
+          margin:0;
+      }
+      
+      .card-author-text .highlight{
+          color:#fff;
+          cursor:pointer;
+      }
+
+
+
+
+
+      .line{
+        background-color:d7bfdc;
+        width:90%;
+        margin-top:10px;
+        margin-bottom:4px;
+        margin-left:5%;
+        margin-right:5%;
+        height:10px;
+        border-radius:20px;
+      }
+
+      /*=== NFT DISPLAY SECTION ===*/
+
+
+
+      /*== AUDITION ==*/
+      .audition h2{
+        margin-top:30px;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        color:#fff;
+      }
+
+      .audition p{
+        padding:20px;
+        color:#fff;   
+      }
+
+      /*=== END OF AUDITION ===*/
+
+
+
+
+      /*=== OUR TEAM ===*/
+      .our-team{
+        width:60%;
+        margin-left:20%;
+        margin-right:20%;
+        border-radius:20px;
+        background-color:#fff;
+        margin-bottom:0px;
+      }
+
+      .our-team h2{
+        padding-top:15px;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        color:#001028;
+      }
+
+      .our-team img{
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:80px;
+        height:80px;
+        border-radius:20px;
+      }
+
+      .our-team p {
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        color:#001028;
+
+      }
+      .mytwitter{
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        font-size:15px;
+        display:block;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+        color:grey;
+
+      }
+
+      /*=== END OF OUR TEAM ===*/
+
+
+
+      /*=== FOOTER ===*/
+      .main-footer{
+        width:100%;
+        padding:30px;
+        background-color:#292929;
+        height:200px;
+        margin-top:20px;
+      }
+      .branding{
+        color:white;
+        width:20%;
+        float:left;
+        margin-top:20px;
+        margin-bottom:20px;
+      }
+      .main-footer .branding img{
+        width:50px;
+        height:50px;
+        border-radius:20px;
+      }
+      .main-footer .branding p{
+        font-size:12px;
+      }
+
+
+
+      .main-footer .contaner{
+        width:50%;
+        text-align:center;
+        justify-content:center;
+        align-items:center;
+        self-align:center;
+        color:white;
+        float:left;
+        margin-top:20px;
+      }
+      .main-footer .contaner h3 img{
+        width:25px;
+        height25px;
+      }
+
+
+      
+      .main-footer .section{
+        color:white;
+        width:25%;
+        float:right;
+        margin-top:20px;
+      }
+      .main-footer .section ul li{
+        list-style-type:none;
+
+      }
+      .main-footer .section ul li  a{
+        color:white;
+        text-decoration:none;
+      }
+    </style>
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
+    
+    
+    <!--=== METAMASK INTEGRATION ===-->
+    <script>
+
+      const TIMEOUT = 1000;
+      const COLLECTION_NAME = 'M.O.E';
+      let editions = [];
+      let dots = 1;
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const onboarding = new MetaMaskOnboarding();
+        const onboardButton = document.getElementById('connectWallet');
+        let accounts;
+
+        const updateButton = async () => {
+          if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
+            onboardButton.innerText = 'Install MetaMask!';
+            onboardButton.onclick = () => {
+              onboardButton.innerText = 'Connecting...';
+              onboardButton.disabled = true;
+              onboarding.startOnboarding();
+            };
+          } else if (accounts && accounts.length > 0) {
+            onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
+            onboardButton.disabled = true;
+            onboarding.stopOnboarding();
+            checkOwner(accounts[0]);
+          } else {
+            onboardButton.innerText = 'Connect MetaMask!';
+            onboardButton.onclick = async () => {
+              await window.ethereum.request({
+                method: 'eth_requestAccounts',
+              })
+              .then(function(accounts) {
+                onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
+                onboardButton.disabled = true;
+                checkOwner(accounts[0]);
+              });
+            };
+          }
+        };
+
+        updateButton();
+        if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+          window.ethereum.on('accountsChanged', (newAccounts) => {
+            accounts = newAccounts;
+            updateButton();
+          });
+        }
+      });
+
+      const checkOwner = async (account) => {
+        if(account) {
+          let isOwner = false;
+          let page = 1
+          
+          const data = await fetchWithRetry(`/.netlify/functions/isowner/?wallet=${account}&page=${page}`);
+
+          isOwner = !isOwner ? data.isOwner : isOwner;
+          updateStatusText(isOwner, true)
+          
+          editions = [...data.editions]
+          let nextPage = data.next_page
+
+          while(nextPage) {
+            page = nextPage
+            const data = await fetchWithRetry(`/.netlify/functions/isowner/?wallet=${account}&page=${page}`);
+
+            isOwner = !isOwner ? data.isOwner : isOwner;
+            updateStatusText(isOwner, true)
+            
+            editions = [...editions, ...data.editions]
+            nextPage = data.next_page
+          }
+
+          updateStatusText(isOwner, false)
+        }
+      }
+
+      function updateStatusText(isOwner, checking) {
+        const statusText = document.querySelector('.owner-status');
+        if(checking) {
+          if(isOwner) {
+            statusText.innerText = `You do own ${COLLECTION_NAME}!! 😻 Let's see how many${renderDots(dots)}`;
+          } else {
+            statusText.innerText = `Checking to see if you own any ${COLLECTION_NAME} 😻${renderDots(dots)}`;
+          }
+        } else {
+          if(isOwner) {
+            statusText.innerText = `You own ${editions.length} ${COLLECTION_NAME}!! 😻`;
+          } else {
+            statusText.innerText = `You don't own any ${COLLECTION_NAME} 😿`;
+          }
+        }
+        dots = dots === 3 ? 1 : dots + 1;
+      }
+
+      function renderDots(dots) {
+        let dotsString = '';
+        for (let i = 0; i < dots; i++) {
+          dotsString += '.';
+        }
+        return dotsString;
+      }
+
+      function timer(ms) {
+        return new Promise(res => setTimeout(res, ms));
+      }
+
+      async function fetchWithRetry(url)  {
+        await timer(TIMEOUT);
+        return new Promise((resolve, reject) => {
+          const fetch_retry = (_url) => {
+            return fetch(_url).then(async (res) => {
+              const status = res.status;
+
+              if(status === 200) {
+                return resolve(res.json());
+              }            
+              else {
+                console.error(`ERROR STATUS: ${status}`)
+                console.log('Retrying')
+                await timer(TIMEOUT)
+                fetch_retry(_url)
+              }            
+            })
+            .catch(async (error) => {  
+              console.error(`CATCH ERROR: ${error}`)  
+              console.log('Retrying')    
+              await timer(TIMEOUT)    
+              fetch_retry(_url)
+            }); 
+          }
+          return fetch_retry(url);
+        });
+      }
+    
+    </script>  
+
+    
+    
   </body>
 </html>

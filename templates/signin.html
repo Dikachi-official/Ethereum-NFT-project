@@ -13,8 +13,13 @@
   </head>
   <body>
     <div class="hero">
+      <div class="line"></div>
       <div class="title">
-        <h1>Myke.NFT</h1>
+        <div class="moe">
+          <h1>MONKS<br/> OF<br/> <img src="{% static 'img/eth2.png' %}"></h1>
+        </div>
+        <br/>
+        <br/>
         <div class="back-text">
           <span>W</span>
           <span>E</span>
@@ -46,14 +51,18 @@
         </button>
       </div>
       {% endfor %}
-
+      <div class="line1"></div>
       <div class="main1">
+        <h2>Sign in</h2>
+        <p class="Not-registered">Not Registered <a href="{% url 'signup' %}#register">SignUp</a></p>
         <div class="main2">
-          <h2>Sign in</h2>
+          <img class="monk1" src="{% static 'img/monkcharacter2.png' %}">
+
           <form action="/signin" method="post">
             {% csrf_token %}
             <div class="inputbox">
               <label for="">Username</label>
+              <br />
               <input
                 type="text"
                 id="username"
@@ -61,9 +70,9 @@
                 placeholder="Input Username"
                 required
               />
-            </div>
-            <div class="inputbox">
+              <br />
               <label for="">Password</label>
+              <br />
               <input
                 type="password"
                 id="password"
@@ -72,22 +81,88 @@
                 required
               />
               <br />
+              <button type="submit" class="btn btn-primary">Login</button>
             </div>
-            <div class="form-group form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1">
-                Confirm you're not a bot
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset">Clear</button>
           </form>
+          <img class="monk2" src="{% static 'img/monkcharacter3.png' %}">
         </div>
       </div>
+    </div>
+
+    <div class="eco-system">
+      
+      <h2>ECO-SYSTEM</h2>
+      <p>M.O.E is a rebuilding metaverse of monks guarding our ethereum asset.
+        You will have to sign in to our authentication system to be part of us,
+        You'll get free NFT when we launch.
+      </p>
+    </div>  
+    <hr/>
+    <div class="roadmap">
+      <h2 id="roadmap"> ROADMAP </h2>
+      <p> MONKS OF ETHEREUM (M.O.E) is a little different from what you are used to,
+        Every quarter we bring you exciting new content and updates!
+      </p>
+      <br/>
+      <ul>
+        <li>1. Complete Creation of Web tools</li>
+        <li>2. M.O.E official website launch</li>
+        <li>3. M.O.E promotion video release</li>
+        <br/>
+        <p><b> PHASE II </b></p>
+        <li>1. First NFT collection </li>
+        <li>2. External agency partnerships</li>
+        <li>3. Social media and influencer campaign kick off</li>
+        <li>4. M.O.E white paper release</li>
+        <br/>
+        <p><b> PHASE III </b></p>
+        <li>1. Completion and testing of Central City of Monks</li>
+        <li>2. Private Sale of M.O.E Tokens</li>
+        <li>3. M.O.E System completed and tested</li>
+        <li>4. Mint M.O.E NFT and trade in third party market</li>
+        <br/>
+        <p><b> PHASE IV </b></p>
+        <li>Transition into a play to earn platform</li>
+        <li>
+          Introduce VR/AR to realize the integration
+          of reality and virtuality, and launch a new experience mode
+        </li>
+      </ul>  
+    </div>
+    <div class='featured'>
+      <div class="line"></div>
+      <h3> POWERED BY </h3>
+      <div class="featuredimg">
+        <img src="{% static 'img/eth2.png' %}">
+        <img src="{% static 'img/myke.jpg' %}">
+      </div>
+    </div>
+    <hr/>
+    <div class='collaborations'>  
+      <h3> COLLABORATIONS</h3>
+      <p>To be announced soon !!!</p>
+    </div>  
+
+
+    <div class="main-footer">
+      <hr/>
+      <div class="branding">
+        <img src="{% static 'img/myke.jpg'%}">
+        <p>Exclusive NFT Collection coming soon</p>
+      </div>  
+      <div class="contaner">
+        <h3>MONKS OF  <img src="{% static 'img/eth2.png' %}"></h3>
+        <h3>M.O.E</h3>
+        <small>Terms of service &#169</small>
+      </div>
+      <div class="section">
+        <p> ABOUT M.O.E</p>
+        <ul>
+          <br/>
+          <li><a href="{% url 'signup' %}#sec">About</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>  
+      </div>  
     </div>
 
     <script>
@@ -101,5 +176,327 @@
         }
       };
     </script>
+    <style>
+
+      body{
+        background-image:url({% static 'img/backmonk.png' %});
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+
+      .hero {
+        background-color: #311432;
+      }
+
+      .line{
+        background-color:d7bfdc;
+        width:90%;
+        margin-top:10px;
+        margin-bottom:4px;
+        margin-left:5%;
+        margin-right:5%;
+        height:10px;
+        border-radius:20px;
+      }
+      .line1{
+        background-color:d7bfdc;
+        width:90%;
+        margin-top:10px;
+
+        margin-left:5%;
+        margin-right:5%;
+        height:10px;
+        border-radius:20px;
+      }
+
+
+      .main1{
+        background: url("/static/img/thunderstorm.jpg")
+        
+      }
+      .main1 h2{
+        margin-top:20px;
+      }
+      .Not-registered{
+        margin-top:20px;
+        color:white;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+      }
+      .Not-registered a{
+        color:white;
+        text-decoration:none
+      }
+      .main2 {
+        display:inline-flex;
+        width:100%;
+        border-radius: 20px;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+      }
+      .main1 h2 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top:30px;
+        color:#fff;
+      }
+      form {
+        border-style: none;
+        width:60%;
+
+
+      }
+      form input{
+        width:100%;
+      }
+      .hero{
+        height:600px;
+      }
+
+      .monk1{
+        margin-left:3%;
+        width:16%;
+      }
+      .monk2{
+        margin-right:3%;
+        width:16%;
+      }
+      .moe{
+        margin-bottom:30px;
+      }
+      .moe h1 img{
+        width:40px;
+        height:70px;
+      }
+      .back-text{
+        margin-top:80px;
+        margin-bottom:80px;
+      }
+      .inputbox {
+        background-color: white;
+        border-style: none;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: d7bfdc;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom:30px;
+
+      }
+      .inputbox input {
+        border-radius: 20px;
+        height: 30px;
+      }
+      .inputbox button {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 35px;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #4169e1;
+        margin-top:15px;
+      }
+
+      /*=== START OF ECO-SYSTEM ===*/
+
+      .eco-system{
+        width:100%;
+        background-color:#1c0522;
+      }
+
+      .eco-system h2{
+        padding-top:20px;
+        color:#fff;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+      }
+
+      .eco-system p{
+        padding:30px;
+        color:#fff;
+      }
+
+      /*=== END OF ECO-SYSTEM ===*/
+
+
+      /*=== ROADMAP START ===*/
+      .roadmap{
+        color:#fff;
+        background-color:#1c0522;
+        padding-top:30px;
+        padding:20px;
+        padding-bottom:30px;
+      }
+
+      .roadmap h2{
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+
+      }
+      .roadmap p{
+        padding-left:10px;
+        padding-right:10px;
+      }
+
+      .roadmap ul li{
+        list-style-type:none;
+        padding-left:20px;
+        padding-right:20px;
+      }
+      /*=== END OF ROADMAP ===*/
+
+      .featured{
+        width:100%;
+        background-color:#fff;
+      }
+      .featured h3{
+        margin-top:20px;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+      }
+      .featuredimg{
+        display:inline-flex;
+        margin-top:30px;
+        margin-bottom:30px;
+        width:27%;
+        margin-left:36.5%;
+        margin-right:36.5%;
+      }
+      .featuredimg img{
+        width:65px;
+        height:80px;
+        margin-left:30px;
+      }
+      .collaborations{
+        width:100%;
+        background-color:#fff;
+      }
+      .collaborations h3{
+        margin-top:20px;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+      }
+      .collaborations p{
+        margin-top:30px;
+        margin-bottom:35px;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+      }
+
+      
+      /*=== FOOTER ===*/
+      .main-footer{
+        width:100%;
+        padding:30px;
+        background-color:#292929;
+        height:200px;
+        margin-top:20px;
+      }
+      .branding{
+        color:white;
+        width:20%;
+        float:left;
+        margin-top:20px;
+        margin-bottom:20px;
+      }
+      .main-footer .branding img{
+        width:50px;
+        height:50px;
+        border-radius:20px;
+      }
+      .main-footer .branding p{
+        font-size:12px;
+      }
+
+
+
+      .main-footer .contaner{
+        width:50%;
+        text-align:center;
+        justify-content:center;
+        align-items:center;
+        self-align:center;
+        color:white;
+        float:left;
+        margin-top:20px;
+      }
+      .main-footer .contaner h3 img{
+        width:25px;
+        height25px;
+      }
+
+
+      
+      .main-footer .section{
+        color:white;
+        width:25%;
+        float:right;
+        margin-top:20px;
+      }
+      .main-footer .section ul li{
+        list-style-type:none;
+
+      }
+      .main-footer .section ul li  a{
+        color:white;
+        text-decoration:none;
+      }
+      .row{
+          text-align: center;
+          justify-content: center;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .back-text{
+          margin-top:150px;
+        }
+        .hero{
+          height:400px;
+        }
+      }
+
+      @media only screen and (max-width: 440px) {
+        .hero{
+          height:200px;
+        }
+        .title{
+          height:200px;
+        }
+
+        form{
+          width:100%;
+          height:auto;
+        }
+        form input{
+          width:100px;
+          height:20px;
+          margin-left:0px;
+          padding-left:0px;
+        }
+        .featuredimg img{
+          width:30px;
+          height:30px;
+        }
+
+      }
+    </style>
   </body>
 </html>

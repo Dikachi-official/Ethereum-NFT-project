@@ -13,6 +13,8 @@
     background-image: url(/static/birds1.png);
 }
 
+
+
 .title{
     margin: auto;
     width:fit-content;
@@ -194,18 +196,3 @@
 
 
 /*--=======FORM DESIGN======--*/
-.inputbox{
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    inset:2px;
-    border-radius: 15px;
-    border-color: #292929;
-    border-style: solid;
-    border-width: 5px;
-    z-index:10;
-    padding:30px 30px;
-    background: #7597de;
-    display:inline-block;
-    line-height: 40px;
-}
