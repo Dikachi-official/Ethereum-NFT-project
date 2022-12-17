@@ -36,7 +36,7 @@
     <div class="main-body">
       {% for message in messages%}
       <!--=FOR EVERY MESSAGE IN OUT ERROR MESSAGES IN VIEWS, EFFECT SHOULD BE TAKEN IN THIS FORM==-->
-      <div
+      <div style="background-color:white; width:60%; margin-left:10px; border-radius:20px; padding:8px; border:2px solid #d7bfdc;",
         class="alert alert-{{message.tags}} alert-dismissible fade show"
         role="alert"
       >
@@ -81,9 +81,7 @@
                 required
               />
               <br />
-              <!--<p>Authentication on hold</p>-->
 
-              <!--===DATABASE ERROR===-->
               <button type="submit" class="btn btn-primary">Login</button>
             </div>
           </form>
@@ -311,6 +309,10 @@
         border-radius: 20px;
         background-color: #4169e1;
         margin-top:15px;
+      }
+
+      .inputbox button:hover{
+        background-color:#795695;
       }
 
       /*=== START OF ECO-SYSTEM ===*/

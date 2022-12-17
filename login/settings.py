@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-h0l!fb#0+9gp=hr1zk%ppvd!u6qr=$v3@&o0bg%3#y^_tz@9la
 #DEBUG = config('DEBUG', cast=bool )
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-98ab.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-98ab.up.railway.app', '127.0.0.1','localhost']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-98ab.up.railway.app']
 
 
@@ -89,7 +89,7 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD' : 'zYJyhg9tTKIE5VOLHKBK',
+        'PASSWORD' : 'HIZuKDc2yRGZKw5BvSui',
         'HOST': 'containers-us-west-91.railway.app',
         'PORT': '5573',
     }

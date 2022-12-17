@@ -14,7 +14,7 @@
   <body>
     <!--========FOR THE POP UP MESSAGE, SAYING "ACCOUNT SUCCESSFULLY CREATED"=========-->
     {% for message in messages %}
-    <div
+    <div 
       class="alert alert-{{message.tags}} alert-dismissible fade show"
       role="alert"
     >
@@ -33,14 +33,14 @@
 
     {% if user.is_authenticated %}
     <!--if user is logged in display these words below, and for more info the jinja tags holding variables where prev assigned in views.py-->
-    <h3>Hello {{fname}}</h3>
-    <h3>You are successfully logged in</h3>
-    <h3>myke.NFT</h3>
-    <button type="submit"><a href="signup">SignOut</a></button>
+    <h3 style="margin-left:10px;",>Congratulations  {{fname}}</h3>
+    <h3 style="margin-left:10px;",>You have been whitelisted</h3>
+    <h3 style="margin-left:10px; margin-top:20px; text-align:center; color:#d7bfdc;",>WELCOME TO MONKS OF ETHEREUM</h3>
+    <button class="btn200" type="submit"><a style="color:white;" href="signup">SignOut</a></button>
 
     {% else %}
-    <button type="submit"><a href="/signup">SignUp</a></button>
-    <button type="submit"><a href="/signin">SignIn</a></button>
+    <button class="btn200" type="submit"><a href="/signup">SignUp</a></button>
+    <button class="btn200" type="submit"><a href="/signin">SignIn</a></button>
 
     {% endif %}
 
@@ -76,7 +76,8 @@
                 <div class="home__group">
                     <div class="home__images">
                         <div class="home__img-eth">
-                            <img src="{% static 'img/eth2.png' %}" alt="home image">
+                            <img class="monkman" src="{% static 'img/monkcharacter1.png' %}">
+                            <!--<img src="{% static 'img/eth2.png' %}" alt="home image">-->
                         </div>
                         <div class="home__img-orbe">
                             <img src="{% static 'img/holder.png' %}" alt="home image">
@@ -102,25 +103,25 @@
                 <div class="home__footer">
                     <div>
                         <span class="home__footer-title">Starting price</span>
-                        <h3 class="home__footer-number">2.00 ETH</h3>
-                        <span class="home__footer-subtitle">$3000.56</span>
+                        <h3 class="home__footer-number">To be announced</h3>
+                        <span class="home__footer-subtitle">Exclusive NFT Collection coming soon</span>
                     </div>
 
                     <div>
                         <span class="home__footer-title">Launching</span>
                         <div class="home__footer-time">
                             <div class="home__footer-counter">
-                                <h3 class="home__footer-number">06</h3>
+                                <h3 class="home__footer-number">00</h3>
                                 <span class="home__footer-subtitle">hours</span>
                             </div>
 
                             <div class="home__footer-counter">
-                                <h3 class="home__footer-number">37</h3>
+                                <h3 class="home__footer-number">00</h3>
                                 <span class="home__footer-subtitle">minutes</span>
                             </div>
 
                             <div class="home__footer-counter">
-                                <h3 class="home__footer-number">60</h3>
+                                <h3 class="home__footer-number">00</h3>
                                 <span class="home__footer-subtitle">seconds</span>
                             </div>
                         </div>
@@ -132,11 +133,31 @@
             </div>
         </section>
     </main>
+    <!--=== CSS CODE ===-->
+    <style>
+        .btn200{
+            width:80px;
+            height:35px;
+            padding:5px;
+            margin-top:20px;
+            margin-left:10px;
+            margin-bottom:10px;
+            color:white;
+            border-radius:20px;
+            background-color:#3b5fcb;
+        }
+
+        .btn200:hover{
+            background-color:#795695;
+        }
+    </style>
+    <!--=== ENDOF CSS CODE ===-->
 
     <!--===============SCROLL REVEALER=================-->
     <script src="scrollreveal.min.js"></script>
 
     <!--===============MAIN JS=================-->
     <script src="main.js"></script>
+
   </body>
 </html>
