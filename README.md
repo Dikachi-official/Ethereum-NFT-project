@@ -6,7 +6,7 @@ Full Django NFT site
 
 ![IMG_20221103_192750](https://user-images.githubusercontent.com/86185353/199809178-60666216-7241-4b8c-b93f-47abc3bbe06f.jpg) Early RoadMap details
 <h1>NFT site made with Django framework</h1>
-<li> An NFT site offering various functionalities like a signup, and authentication</li>
+<li> An NFT site offering various functionalities like signup,authentication, and metamask connection</li>
 <h2>Built With</h2>
 <strong><i><p>Major Languages</p><i></strong>
 <hr>
