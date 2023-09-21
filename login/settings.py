@@ -83,27 +83,27 @@ WSGI_APPLICATION = 'login.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+#DATABASES = {
+#    'default': {
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'v1nNB62ECMlaGJK41mut',
-        'HOST': 'containers-us-west-91.railway.app',
-        'PORT': '5573',
-    }
-}
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        #'NAME': BASE_DIR / 'db.sqlite3',
+#        'NAME': 'railway',
+#        'USER': 'postgres',
+#        'PASSWORD': 'v1nNB62ECMlaGJK41mut',
+#        'HOST': 'containers-us-west-91.railway.app',
+#        'PORT': '5573',
+#    }
+#}
 
 
 # DEFAULT DB
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':  'db.sqlite3',
+    }
+}
 
 
 

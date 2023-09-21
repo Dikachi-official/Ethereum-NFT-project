@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link href="{% static 'signup.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -21,7 +21,9 @@
     </header>
     <div class="main-container">
       <!--<img src="{% static 'img/mountain2.png' %}" id="mountain_behind"/>-->
-      <a class="expoe" href="#signup" id="btn"><p class="btn" id="connectWallet" >Connect MetaMask</p></a>
+      <a class="expoe" id="connectWallet"><p  >
+        Connect MetaMask</p>
+      </a>
     </div>  
     
       <div class="sec" id="sec">
@@ -176,7 +178,7 @@
                 <div class="card-author-img">
                     <img src="{% static 'img/myke.jpg' %}" class="card-author-img__img"/>
                 </div>
-                <h5class="card-author-text">Creation of <span class="highlight">MYKE</span></h5>
+                <h5 class="card-author-text">Creation of <span class="highlight">MYKE</span></h5>
             </div>
             <div class="line"></div>
         </div>  
@@ -226,7 +228,7 @@
       <br/>
     </div>
 
-    <div class="main-footer">
+    <footer class="main-footer">
       <hr/>
       <div class="branding">
         <img src="{% static 'img/myke.jpg'%}">
@@ -245,12 +247,9 @@
           <li><a href="{% url 'signin' %}#roadmap">Roadmap</a></li>
         </ul>  
       </div>  
-    </div>
+    </footer>
 
     <style>
-      body{
-        background: url("/static/img/thundermedium.jpg")
-      }
 
 
       /*=== SCREEN BELOW 320px ===*/
@@ -264,10 +263,6 @@
           background-size: cover;
           background-attachment: fixed;
         }
-        body{
-          width:100%;
-          
-      }
       } 
 
       /*===Screen below 380px ===*/
@@ -339,19 +334,6 @@
       }
 
 
-      /*=== SCREEN BELOW 420px ===*/
-      @media only screen and (max-width: 420px) {
-        .main-container{
-          width:100%;
-          height:480px;
-          background-repeat: no-repeat;
-          background-position:center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-      } 
-
-
       /*=== Screen below 440px ===*/
       @media only screen and (max-width: 440px) {
         body{
@@ -379,15 +361,12 @@
           padding-right:15px;
           font:12px;
         }
-        .main-container{
-          width:100%;
-          height:500px;
-          background-image:url({% static 'img/mountain2.png' %});
-          background-repeat: no-repeat;
-          background-position:center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
+        .main-container .expoe{
+          font-size:12px;
+          font-weight:bold;
+          padding:12px;
+          margin-top:50%;
+        }  
 
         
         .main-container h2{
@@ -438,116 +417,23 @@
 
       /*=== SCREEN BELOW 600px ===*/
       @media only screen and (max-width: 600px) {
-        .main-container{
-          width:100%;
-          height:500px;
-          background-repeat: no-repeat;
-          background-position:center;
-
-          background-size: cover;
-          background-attachment: fixed;
-        }   
+        .main-container .expoe{
+          font-size:12px;
+          font-weight:bold;
+          padding:12px;
+          margin-top:30%;
+        }     
         /*=== FOOTER ===*/
         .main-footer{
           width:100%;
           padding:30px;
           background-color:#292929;
-          height:250px;
           margin-top:20px;
         } 
       } 
 
 
-      /*=== SCREEN BELOW 800px ===*/
-      @media only screen and (max-width: 800px) {
-        .main-container{
-          width:100%;
-          height:500px;
-          background-repeat: no-repeat;
-          background-position:center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-      }  
-
-      /*=== SCREEN BELOW 800px ===*/
-      @media only screen and (max-width: 800px) {
-        .main-container{
-          width:100%;
-          height:500px;
-          background-image:url({% static 'img/mountain2.png' %});
-          background-repeat: no-repeat;
-          background-position:center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-
-        .main-container .expoe{
-          font-size:14px;
-          width:130px;
-          height:55px;
-          margin-left:35%;
-          margin-top:65%;
-          text-align:center;
-          align-items:center;
-          justify-content:center;
-        }
-        .main-container .expoe .btn{
-          font-size:14px;
-
-        }
-       
-
-
-        header .logo{
-          margin-left:2px;
-          width:3%;
-          font-size:15px;
-        }
-
-        header ul{
-          width:25%;
-          margin-right:10px;
-          padding-right:10px;
-        }
-        header li{
-          margin-right:8px;
-        }
-
-        .form{
-          background-color:d7bfdc;
-          border-style:none;
-          width:65%;
-          margin-left:2%;
-          padding-right:10px;
-          padding-top:10px;
-          margin-bottom:35px;
-          
-        }
-        .inputbox{
-          width:100%;
-        }
-        .inputbox label{
-          width:50px;
-        }
-        .inputbox input{
-          border-radius:20px;
-          margin-right:10px;
-          width:100%;
-          height:30px;
-          font-size:14px;
-        }
-
-          /*=== FOOTER ===*/
-        .main-footer{
-          width:100%;
-          padding:30px;
-          background-color:#292929;
-          height:200px;
-          margin-top:20px;
-        }
-        
-      } 
+      
       
       
 
@@ -579,18 +465,8 @@
         background-size: cover;
       }
 
-      .main-container a{
-        font-size:14px;
-        width:160px;
-        margin-left:45%;
-        margin-top:20%;
-        text-align:center;
-        align-items:center;
-        justify-content:center;
-      }
-
       .main-container a .btn{
-        font-size:15px;
+        font-size:12px;
         font-weight:bold;
       }
 
@@ -952,6 +828,7 @@
         background-color:#292929;
         height:200px;
         margin-top:20px;
+        bottom:0;
       }
       .branding{
         color:white;
@@ -1004,145 +881,13 @@
       }
     </style>
 
-    <script 
-    src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
     
     
     <!--=== METAMASK INTEGRATION ===-->
-    <script>
+    <script src="{% static 'js/script.js'%}">
 
-      const TIMEOUT = 1000;
-      const COLLECTION_NAME = 'M.O.E';
-      let editions = [];
-      let dots = 1;
-
-      window.addEventListener('DOMContentLoaded', () => {
-        const onboarding = new MetaMaskOnboarding();
-        const onboardButton = document.getElementById('connectWallet');
-        let accounts;
-
-        const updateButton = async () => {
-          if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-            onboardButton.innerText = 'Install MetaMask!';
-            onboardButton.onclick = () => {
-              onboardButton.innerText = 'Connecting...';
-              onboardButton.disabled = true;
-              onboarding.startOnboarding();
-            };
-          } else if (accounts && accounts.length > 0) {
-            onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
-            onboardButton.disabled = true;
-            onboarding.stopOnboarding();
-            checkOwner(accounts[0]);
-          } else {
-            onboardButton.innerText = 'Connect MetaMask!';
-            onboardButton.onclick = async () => {
-              await window.ethereum.request({
-                method: 'eth_requestAccounts',
-              })
-              .then(function(accounts) {
-                onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
-                onboardButton.disabled = true;
-                checkOwner(accounts[0]);
-              });
-            };
-          }
-        };
-
-        updateButton();
-        if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-          window.ethereum.on('accountsChanged', (newAccounts) => {
-            accounts = newAccounts;
-            updateButton();
-          });
-        }
-      });
-
-      const checkOwner = async (account) => {
-        if(account) {
-          let isOwner = false;
-          let page = 1
-          
-          const data = await fetchWithRetry(`/.netlify/functions/isowner/?wallet=${account}&page=${page}`);
-
-          isOwner = !isOwner ? data.isOwner : isOwner;
-          updateStatusText(isOwner, true)
-          
-          editions = [...data.editions]
-          let nextPage = data.next_page
-
-          while(nextPage) {
-            page = nextPage
-            const data = await fetchWithRetry(`/.netlify/functions/isowner/?wallet=${account}&page=${page}`);
-
-            isOwner = !isOwner ? data.isOwner : isOwner;
-            updateStatusText(isOwner, true)
-            
-            editions = [...editions, ...data.editions]
-            nextPage = data.next_page
-          }
-
-          updateStatusText(isOwner, false)
-        }
-      }
-
-      function updateStatusText(isOwner, checking) {
-        const statusText = document.querySelector('.owner-status');
-        if(checking) {
-          if(isOwner) {
-            statusText.innerText = `You do own ${COLLECTION_NAME}!! 😻 Let's see how many${renderDots(dots)}`;
-          } else {
-            statusText.innerText = `Checking to see if you own any ${COLLECTION_NAME} 😻${renderDots(dots)}`;
-          }
-        } else {
-          if(isOwner) {
-            statusText.innerText = `You own ${editions.length} ${COLLECTION_NAME}!! 😻`;
-          } else {
-            statusText.innerText = `You don't own any ${COLLECTION_NAME} 😿`;
-          }
-        }
-        dots = dots === 3 ? 1 : dots + 1;
-      }
-
-      function renderDots(dots) {
-        let dotsString = '';
-        for (let i = 0; i < dots; i++) {
-          dotsString += '.';
-        }
-        return dotsString;
-      }
-
-      function timer(ms) {
-        return new Promise(res => setTimeout(res, ms));
-      }
-
-      async function fetchWithRetry(url)  {
-        await timer(TIMEOUT);
-        return new Promise((resolve, reject) => {
-          const fetch_retry = (_url) => {
-            return fetch(_url).then(async (res) => {
-              const status = res.status;
-
-              if(status === 200) {
-                return resolve(res.json());
-              }            
-              else {
-                console.error(`ERROR STATUS: ${status}`)
-                console.log('Retrying')
-                await timer(TIMEOUT)
-                fetch_retry(_url)
-              }            
-            })
-            .catch(async (error) => {  
-              console.error(`CATCH ERROR: ${error}`)  
-              console.log('Retrying')    
-              await timer(TIMEOUT)    
-              fetch_retry(_url)
-            }); 
-          }
-          return fetch_retry(url);
-        });
-      }
+      
     
     </script>  
 

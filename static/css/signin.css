@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+body{
+    width:100%;
+    overflow-x: hidden;
+}
+
 .hero{
     min-width: 100%;
     min-height: 65vh;
